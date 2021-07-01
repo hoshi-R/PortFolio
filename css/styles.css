@@ -1,0 +1,405 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  color: #fff;
+  font-family: 'sans-serif', 'Noto Sans JP';
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1170px;
+}
+
+a {
+  color: #333;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: normal;
+  line-height: 44px;
+  color: #333;
+  max-width: 800px;
+}
+
+.navbar {
+  position: fixed;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  color: #eee;
+  letter-spacing: 2px;
+  padding: 1rem 0.5rem;
+  background-color: #fff;
+}
+
+.navbar a.nav-link {
+  color: #333 !important;
+  font-size: 12px;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar a.nav-link:hover {
+  color: #333;
+  border-bottom: 1px solid #333;
+}
+
+li.nav-item {
+  padding: 0px 10px;
+}
+
+a.navbar-brand {
+  color: #333 !important;
+  letter-spacing: 2px;
+  cursor: hand;
+  transition:.5s;
+}
+
+a.navbar-brand:hover {
+  color: #666;
+  cursor: hand;
+}
+
+.intro {
+  padding: 120px 0px 90px 0px;
+}
+
+.about {
+  padding: 120px 0px;
+}
+
+.about p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+  padding-right: 30px;
+}
+
+p.toc {
+  border-bottom: 1px solid #333;
+  color: #333;
+  font-size: 13px;
+  margin: 30px auto;
+  padding: 10px 0px;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.about p.about-intro {
+  font-family: serif;
+  font-size: 28px;
+  max-width: 700px;
+}
+
+p.sub {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  padding:20px 40px;
+}
+
+.image-slab:hover a {
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.5);
+  position:absolute;
+  top:0;
+  left:0;
+  display:inline-block;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+input[type=text], input[type=email] {
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  background-color: transparent;
+  border-radius: 2px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+textarea.form-control {
+  width: 100%;
+  height: 140px;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #777;
+  border-radius: 2px;
+  background-color: transparent;
+  resize: none;
+  color: #333;
+}
+
+input[type=submit] {
+  padding: 10px 0px;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #333;
+  color: #333;
+  margin: 30px auto;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+}
+
+input:focus, textarea.form-control:focus, input.form-control:focus {
+    outline: none;
+    border: none;
+    border: 1px solid #333;
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-toggler {
+  border: none;
+}
+
+label {
+  font-size: 12px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+footer {
+  padding: 40px 0px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+footer .container {
+  border-top: 2px solid rgba(144,130,109,.2);
+  color: #999;
+  padding: 20px 0px;
+  font-size: 10px;
+}
+
+
+/* -----ここから追記----- */
+.animationTarget {
+  position: relative;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: 1.5s;
+}
+
+.lookMe {
+  opacity: 1;
+  transform: none;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 3000;
+}
+
+.loading.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-border {
+  border: 1.5px solid #333;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.btn-border:hover {
+  color: #fff;
+  background: #333;
+}
+
+.modal-contentFrom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.contact_text {
+  letter-spacing: 2px;
+  padding: 0 3%;
+  margin: 0;
+}
+
+/*　メニュー　*/
+
+main {
+  height: 200vh;
+}
+
+.menuButton {
+  display: none;
+}
+
+.navMask {
+  display: none;
+}
+
+/* -----end----- */
+
+@media only screen and (max-width: 992px) {
+
+  footer {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .navText {
+    font-size: 1rem;
+  }
+
+  .navbar a.nav-link:hover {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .menuButton {
+    display: block;
+    height: 34px;
+    width: 34px;
+    border: #333 solid 1px;
+    position: fixed;
+    right: 2rem;
+    z-index: 2003;
+  }
+
+  .menuButton.no {
+    border: #fff solid 1px;
+  }
+
+  .menuButtonText {
+    color: #333;
+    position: absolute;
+    letter-spacing: 0;
+    margin: 0;
+    left: 7%;
+    bottom: -6%;
+    font-size: 10px;
+    transform: scale(0.8); 
+  }
+
+  .menuButton.on p {
+    color: #fff;
+  }
+
+  .menuButton div {
+    height: 1px;
+    width: 60%;
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    transition: .2s;
+  }
+
+  .menuButton div:nth-of-type(1) {
+    transform: translate(-50%, -9px);
+  }
+
+  .menuButton div:nth-of-type(3) {
+    transform: translate(-50%, 3px);
+  }
+
+  .menuButton.on div:nth-of-type(1) {
+    transform-origin: 0% 50%;
+    transform: rotate(45deg) translate(-65%, -300%);
+    background-color: #fff;
+  }
+
+  .menuButton.on div:nth-of-type(2) {
+    opacity: 0;
+    background-color: #fff;
+  }
+
+  .menuButton.on div:nth-of-type(3) {
+    transform-origin: 0% 50%;
+    transform: rotate(-45deg) translate(-35%, -300%);
+    background-color: #fff;
+  }
+
+  .navResponsive {
+    display: none;
+  }
+
+  .navResponsive.on {
+    display: block;
+    position: fixed;
+    top: 45vh;
+    left: 40vw;
+  }
+
+  .navbar a.nav-link {
+    z-index: 2001;
+    color: #fff !important;
+  }
+
+  .navResponsive.on > .navMask {
+    display: block;
+    z-index: -1;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    color: #fff;
+  }
+
+
+
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  .image-slab {height: 350px;}
+
+    
+}
+
