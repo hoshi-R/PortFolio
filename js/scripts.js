@@ -65,7 +65,7 @@ document.addEventListener("scroll", function() {
     }
 });
 
-loading animetion
+// loading animetion
 function loaded() {
     document.getElementById("loading").classList.remove("active")
 }
