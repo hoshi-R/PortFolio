@@ -65,14 +65,17 @@ document.addEventListener("scroll", function() {
     }
 });
 
-// loading animetion
-function loaded() {
-    document.getElementById("loading").classList.remove("active")
-}
-window.addEventListener("load", function() {
-    this.setTimeout(loaded, 1200)
-});
-setTimeout(loaded, 5000);
+// ロード画面
+
+// function loaded() {
+//     document.getElementById("loading").classList.remove("active")
+// }
+// window.addEventListener("load", function() {
+//     this.setTimeout(loaded, 1200)
+// });
+// setTimeout(loaded, 5000);
+
+// ナビゲーション
 
 const responsiveNav = document.getElementById("menuButton");
 
