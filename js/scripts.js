@@ -53,16 +53,21 @@
 
 // });
 
-//
+// アニメーション
 const targetElement = document.querySelectorAll(".animationTarget");
 document.addEventListener("scroll", function() {
-    for (let index = 0; index < targetElement.length; index++) {
-        const getElementDistance = targetElement[index].
-        getBoundingClientRect().top ; targetElement[index].clientHeight * 0.5
+
+    for (let i = 0; i < targetElement.length; i++) {
+        const getElementDistance = targetElement[i].
+        getBoundingClientRect().top ; targetElement[i].clientHeight * 0.3
         if (window.innerHeight > getElementDistance) {
-            targetElement[index].classList.add("lookMe");
-        }        
+            targetElement[i].classList.add("lookMe");
+        }
     }
+
+    var scroll = document.documentElement.scrollTop;
+    
+    console.log(scroll)
 });
 
 // ロード画面
@@ -78,7 +83,6 @@ document.addEventListener("scroll", function() {
 // ナビゲーション
 
 const responsiveNav = document.getElementById("menuButton");
-
 document.addEventListener("DOMContentLoaded", function() {
     
     responsiveNav.addEventListener("click", function() {
@@ -87,8 +91,43 @@ document.addEventListener("DOMContentLoaded", function() {
     responsiveNav.addEventListener("click", function() {
         document.getElementById("navbarResponsive").classList.toggle("on")
     });
-
 });
+
+// 時間表記
+
+function set2fig(num) {
+    var ret;
+    if( num < 10 ) { ret = "0" + num; }
+    else { ret = num; }
+    return ret;
+}
+function showClock2() {
+    var nowTime = new Date();
+    var nowHour = set2fig( nowTime.getHours() );
+    var nowMin  = set2fig( nowTime.getMinutes() );
+    var nowSec  = set2fig( nowTime.getSeconds() );
+    var msg = nowHour + ":" + nowMin + ":" + nowSec;
+    document.getElementById("RealTimeClock").innerHTML = msg;
+}
+setInterval('showClock2()',1000);
+
+var msg1 = "Good Morning.";
+var msg2 = "Good Afternoon.";
+var msg3 = "Good Evening";
+var hour = new Date().getHours();
+if(hour >= 0 && hour <= 9){
+	document.getElementById("nowTime").innerHTML = msg1;
+}
+else if(hour >= 10 && hour <= 17){
+	document.getElementById("nowTime").innerHTML = msg2;
+}
+else if(hour >= 18 && hour <= 23){
+	document.getElementById("nowTime").innerHTML = msg3;
+}
+
+
+
+// jQuery試運転
 
 $(function() {
     $('#test').click(function() {
@@ -96,3 +135,4 @@ $(function() {
     });
 
 });
+
