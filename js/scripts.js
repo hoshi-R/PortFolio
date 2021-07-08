@@ -59,26 +59,30 @@ document.addEventListener("scroll", function() {
 
     for (let i = 0; i < targetElement.length; i++) {
         const getElementDistance = targetElement[i].
-        getBoundingClientRect().top ; targetElement[i].clientHeight * 0.3
+        getBoundingClientRect().top + targetElement[i].clientHeight * 0.7
         if (window.innerHeight > getElementDistance) {
             targetElement[i].classList.add("lookMe");
         }
     }
 
     var scroll = document.documentElement.scrollTop;
-    
-    console.log(scroll)
+    if (scroll != 0) {
+        document.getElementById("mainNav").classList.add("kage");
+    }
+    else if(scroll == 0) {
+        document.getElementById("mainNav").classList.remove("kage");
+    }
 });
 
 // ロード画面
 
-// function loaded() {
-//     document.getElementById("loading").classList.remove("active")
-// }
-// window.addEventListener("load", function() {
-//     this.setTimeout(loaded, 1200)
-// });
-// setTimeout(loaded, 5000);
+function loaded() {
+    document.getElementById("loading").classList.remove("active")
+}
+window.addEventListener("load", function() {
+    this.setTimeout(loaded, 1200)
+});
+setTimeout(loaded, 5000);
 
 // ナビゲーション
 
