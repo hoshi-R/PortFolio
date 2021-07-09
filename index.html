@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-		<link href="css/styles.css" rel="stylesheet">
 		<link rel="icon" type="favicon" href="assets/star-solid.svg">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;900&display=swap" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
     <title>HoshiPortFolio</title>
 		
   </head>
@@ -36,7 +36,10 @@
 							<a class="nav-link responsiveNavLink" href="#about">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link responsiveNavLink" href="#projects">skill</a>
+							<a class="nav-link responsiveNavLink" href="#skill">skill</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link responsiveNavLink" href="#project">Project</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link responsiveNavLink" href="#contact">Contact</a>
@@ -49,7 +52,7 @@
 
     <section>
 			<div class="container">
-			<div class="intro row">
+			<div class="greet row">
 				<div class="col-sm">
 					<p class="toc">Greet</p>
 					<h1><span id="nowTime"></span><br>
@@ -57,46 +60,47 @@
 						By the way, it's&nbsp;<span id="RealTimeClock"></span> now</h1>
 				</div>
 			</div>
-	</section>
+		</section>
     
-	<section id="about" class="about animationTarget">
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<p class="toc" id="test">About</p>
-				</div>
-				<div class="col-12">
-					<p class="about-intro">Hoshi R</p>
-				</div>
-				<div class="about-grid">
-					<img class="about-img" src="assets/img/hacker-600.jpg" alt="ハッカー">
-					<p class="about-text" id="kieru">
+		<section id="about" class="about animationTarget">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<p class="toc">About</p>
+					</div>
+					<div class="col-12">
+						<p class="aboutIntro">Hoshi R</p>
+					</div>
+					<div class="about-grid">
+						<img class="about-img" src="assets/img/hacker-600.jpg" alt="ハッカー的な何か">
+						<p class="aboutText">
 						1995年生まれ。千葉県出身、1児の父(予定)。大学卒業後、地場ゼネコンに就職。<br>
 						本業をこなしながら、コーポレートサイトやイメージアップ看板などを作成してきました。<br>
 						「ものづくり」「ことづくり」が大好きな人間で、常に新しい知識やスキル習得を続けています。
-					</p>
+						</p>
+					</div>
 				</div>
 			</div>
-		</div>
     </section>
 
 		<section id="skill" class="skill animationTarget">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<p class="toc" id="test">skill</p>
+						<p class="toc" id="test-toggle">skill</p>
 					</div>
+						<p class="test-toggleTarget" id="test-toggleTarget">ほぼ全て独学で学んだものなので、<br>スキルレベルは…？<br>作品等に対してご指導頂ければ幸いです。</p>
 					<div class="skill-grid">
 						<div>
 							<p class="skillText">HTML</p>
 							<div class="graph">
-								<span class="bar" style="width: 60%;"></span>
+								<span class="bar" style="width: 40%;"></span>
 							</div>
 						</div>
 						<div>
 							<p class="skillText">CSS</p>
 							<div class="graph">
-								<span class="bar" style="width: 50%;"></span>
+								<span class="bar" style="width: 40%;"></span>
 							</div>
 						</div>
 						<div>
@@ -114,7 +118,7 @@
 						<div>
 							<p class="skillText">Ruby on Rails</p>
 							<div class="graph">
-								<span class="bar" style="width: 35%;"></span>
+								<span class="bar" style="width: 30%;"></span>
 							</div>
 						</div>
 						<div>
@@ -150,32 +154,30 @@
 					</div>
 				</div>
 			</div>
-			</section>
+		</section>
     
     <section id="contact">
 			<!-- Button trigger modal -->
 			<div class="container">
+				<div class="row">
+					<div class="col-sm">
+						<p class="toc">Contact</p>
+					</div>
+				</div>
 				<button type="button" class="btn btn-border" data-toggle="modal" data-target="#exampleModalCentered">
 					<p class="contact_text">CONTACT</p>
 				</button>
+				<p class="warningNote">※Googleフォームが開きます</p>
 			</div>
-
 			<!-- Modal -->
-			<div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+			<div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog">
 				<div class="modal-dialog modal-dialog-Centered" role="document">
 					<div class="modal-contentFrom">
-							<div class="modal-header">
-									<h5 class="modal-title" id="exampleModalCenteredLabel">Contact</h5>
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-											<span aria-hidden="true">&times;</span>
-										</button>
-							</div>
-							<div class="modal-body">
-									<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0BIIilAqheyHYX9JIjk1hAU8YotU1x66CaO1bp3OMko9eHA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							</div>
+						<div class="modal-body">
+							<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc0BIIilAqheyHYX9JIjk1hAU8YotU1x66CaO1bp3OMko9eHA/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 						</div>
 					</div>
 				</div>
