@@ -13,7 +13,7 @@ document.addEventListener("scroll", () => {
 
     for (let i = 0; i < targetElement.length; i++) {
         const getElementDistance = targetElement[i].
-        getBoundingClientRect().top + targetElement[i].clientHeight * 0.6;
+        getBoundingClientRect().top + targetElement[i].clientHeight * 0.3;
         if (window.innerHeight > getElementDistance) {
             targetElement[i].classList.add("lookMe");
         }

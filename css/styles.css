@@ -172,7 +172,7 @@ p.aboutIntro {
 
 .skill-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
   color: #333;
 }
@@ -440,26 +440,19 @@ footer .container {
     color: #fff;
   }
 
-  .graph {
-    width: 250px;
-  }
-
-  .skill-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
+  
 }
 
 @media only screen and (max-width: 768px) {
-
+  
   .container {
     padding: 0 5vw;
   }
-
+  
   .image-slab {
     height: 350px;
   }
-
+  
   .about-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -477,21 +470,20 @@ footer .container {
   .about-img {
     width: 120px;
   }
-
-  .skill-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
+  
   .test-toggleTarget {
     font-size: 14px;
   }
-
+  
+  .graph {
+    width: 250px;
+  }
+  
 }
 
 @media (min-width: 576px){
   .modal-dialog {
-      max-width: 500px;
-      margin: 0.75rem auto;
+    max-width: 500px;
+    margin: 0.75rem auto;
   }
 }
