@@ -13,7 +13,7 @@ document.addEventListener("scroll", () => {
 
     for (let i = 0; i < targetElement.length; i++) {
         const getElementDistance = targetElement[i].
-        getBoundingClientRect().top + targetElement[i].clientHeight * 0.7
+        getBoundingClientRect().top + targetElement[i].clientHeight * 0.6;
         if (window.innerHeight > getElementDistance) {
             targetElement[i].classList.add("lookMe");
         }
@@ -39,16 +39,24 @@ window.addEventListener("load", () => {
 setTimeout(loaded, 5000);
 
 // ナビゲーション
+var menuButton = document.getElementById("menuButton");
+var navMaskLight = document.getElementById("navMaskLight");
 
-const responsiveNav = document.getElementById("menuButton");
 document.addEventListener("DOMContentLoaded", () => {
     
-    responsiveNav.addEventListener("click", function() {
-        this.classList.toggle("on")
+    menuButton.addEventListener("click", function() {
+        menuButton.classList.toggle("on");
+        document.getElementById("navbarResponsive").classList.toggle("on");
+        document.getElementById("navbarResponsiveMask").classList.toggle("on");
     });
-    responsiveNav.addEventListener("click", () => {
-        document.getElementById("navbarResponsive").classList.toggle("on")
+
+    navMaskLight.addEventListener("click", function() {
+        menuButton.classList.toggle("on");
+        document.getElementById("navbarResponsive").classList.toggle("on");
+        document.getElementById("navbarResponsiveMask").classList.toggle("on");
     });
+    
+
 });
 
 // 時間表記
