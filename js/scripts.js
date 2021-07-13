@@ -19,7 +19,7 @@ document.addEventListener("scroll", () => {
         }
     }
 
-    var scroll = document.documentElement.scrollTop;
+    let scroll = document.documentElement.scrollTop;
     if (scroll != 0) {
         document.getElementById("mainNav").classList.add("kage");
     }
@@ -39,8 +39,8 @@ window.addEventListener("load", () => {
 setTimeout(loaded, 5000);
 
 // ナビゲーション
-var menuButton = document.getElementById("menuButton");
-var navMaskLight = document.getElementById("navMaskLight");
+let menuButton = document.getElementById("menuButton");
+let navMaskLight = document.getElementById("navMaskLight");
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -62,25 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
 // 時間表記
 
 function set2fig(num) {
-    var ret;
+    let ret;
     if( num < 10 ) { ret = "0" + num; }
     else { ret = num; }
     return ret;
 }
 function showClock2() {
-    var nowTime = new Date();
-    var nowHour = set2fig( nowTime.getHours() );
-    var nowMin  = set2fig( nowTime.getMinutes() );
-    var nowSec  = set2fig( nowTime.getSeconds() );
-    var msg = nowHour + ":" + nowMin + ":" + nowSec;
+    let nowTime = new Date();
+    let nowHour = set2fig( nowTime.getHours() );
+    let nowMin  = set2fig( nowTime.getMinutes() );
+    let nowSec  = set2fig( nowTime.getSeconds() );
+    let msg = nowHour + ":" + nowMin + ":" + nowSec;
     document.getElementById("RealTimeClock").innerHTML = msg;
 }
 setInterval('showClock2()',1000);
 
-var msg1 = "Good Morning.";
-var msg2 = "Good Afternoon.";
-var msg3 = "Good Evening";
-var hour = new Date().getHours();
+let msg1 = "Good Morning.";
+let msg2 = "Good Afternoon.";
+let msg3 = "Good Evening";
+let hour = new Date().getHours();
 if(hour >= 0 && hour <= 9){
 	document.getElementById("nowTime").innerHTML = msg1;
 }
