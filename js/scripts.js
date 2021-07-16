@@ -5,7 +5,17 @@
 */
 //
 // Scripts
-// 
+//
+
+// ロード画面
+
+function loaded() {
+    document.getElementById("loading").classList.remove("active")
+}
+window.addEventListener("load", () => {
+    this.setTimeout(loaded, 1200)
+});
+setTimeout(loaded, 5000);
 
 // アニメーション
 const targetElement = document.querySelectorAll(".animationTarget");
@@ -27,16 +37,6 @@ document.addEventListener("scroll", () => {
         document.getElementById("mainNav").classList.remove("kage");
     }
 });
-
-// ロード画面
-
-function loaded() {
-    document.getElementById("loading").classList.remove("active")
-}
-window.addEventListener("load", () => {
-    this.setTimeout(loaded, 1200)
-});
-setTimeout(loaded, 5000);
 
 // ナビゲーション
 let menuButton = document.getElementById("menuButton");
