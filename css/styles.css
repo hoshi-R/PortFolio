@@ -216,14 +216,18 @@ p.aboutIntro {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.projectList {
+  width: 100%;
   overflow: hidden;
   position: relative;
+  box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 .projectList img {
   object-fit: contain;
   width: 100%;
-  box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.3);
 }
 
 .projectList .caption {
@@ -241,14 +245,11 @@ p.aboutIntro {
 	left: 0;
 	opacity: 0;
 	background-color: rgba(0,0,0,0.4);
-	-webkit-transform: rotateX(-180deg);
 	transform: rotateX(-180deg);
-	-webkit-transition: all 0.6s ease;
 	transition: all 0.6s ease;
 }
 
 .projectList:hover .mask {
-	-webkit-transform: rotateX(0deg);
 	transform: rotateX(0deg);
 	opacity: 1;
 }
